@@ -10,7 +10,7 @@ namespace MultiplesOf
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(value: "");
+            Console.Write("");
         }
     }
 }
