@@ -10,7 +10,26 @@ namespace MultiplesOf
     {
         static void Main(string[] args)
         {
-            Console.Write("");
+            Console.WriteLine(SumOfMultiples(1000, 3, 5));
+        }
+
+        private static int SumOfMultiples(int below, params int[] multiplesOf)
+        {
+            int result = 0;
+
+            for (int j = 0; j < below; j++)
+            {
+                for (int i = 0; i < multiplesOf.Count(); i++)
+                {
+                    if (j % multiplesOf[i] == 0)
+                    {
+                        result += j;
+                        break;
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }
