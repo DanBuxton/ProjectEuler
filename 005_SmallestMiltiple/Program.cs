@@ -10,7 +10,7 @@ namespace _005_SmallestMiltiple
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"The smallest common multiple of 1-20: { SmallestMultiple() }");
+            Console.WriteLine($"The largest common multiple of 1-20: { SmallestMultiple() }");
         }
 
         public static int SmallestMultiple()
