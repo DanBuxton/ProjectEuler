@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CB1DB726-2299-47C2-8AD9-93760EF26D16}</ProjectGuid>
+    <ProjectGuid>{730844D7-0046-4C33-9330-2570DB6D6462}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_005_SmallestMiltiple</RootNamespace>
-    <AssemblyName>005_SmallestMiltiple</AssemblyName>
+    <RootNamespace>_007_PrimeNumber</RootNamespace>
+    <AssemblyName>007_PrimeNumber</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
