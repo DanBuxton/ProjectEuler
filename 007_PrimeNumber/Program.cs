@@ -6,6 +6,43 @@ using System.Threading.Tasks;
 
 namespace _007_PrimeNumber
 {
+    public static class Extentions
+    {
+        public static bool IsPrime(this int num)
+        {
+            if (num <= 1)
+            {
+                return false;
+            }
+            else if (num == 2)
+            {
+                return true;
+            }
+
+            if (num % 2 == 0)
+            {
+                return false;
+            }
+
+            int counter = 3;
+
+            while ((counter * counter) <= num)
+            {
+                if (num % counter == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    // A prime number always odd except for 2. 
+                    counter += 2;
+                }
+            }
+
+            return true;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -15,53 +52,60 @@ namespace _007_PrimeNumber
 
         public static int NthPrimeNumber(int n)
         {
-            int numPrimes = 1, numm = 2;
+            int numPrimes = 1, num = 2;
 
             while (numPrimes < n)
             {
-                numm++;
+                num++;
 
-                if (isPrime(numm))
+                if (num.IsPrime())
                 {
                     numPrimes++;
                 }
             }
 
-            return numm;
+            return num;
         }
 
-        public static bool isPrime(int numm)
+        #region isPrime
+        /// <summary>
+        /// Decides if a number is prime or not. 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns>Returns true when the number is prime</returns>
+        public static bool isPrime(int num)
         {
-            if (numm <= 1)
+            if (num <= 1)
             {
                 return false;
             }
-
-            if (numm == 2)
+            else if (num == 2)
             {
                 return true;
             }
 
-            if (numm % 2 == 0)
+            if (num % 2 == 0)
             {
                 return false;
             }
 
             int counter = 3;
 
-            while ((counter * counter) <= numm)
+            while ((counter * counter) <= num)
             {
-                if (numm % counter == 0)
+                if (num % counter == 0)
                 {
                     return false;
                 }
                 else
                 {
+                    // A prime number always odd except for 2. 
                     counter += 2;
                 }
             }
 
             return true;
         }
+        #endregion
     }
 }
