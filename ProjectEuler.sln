@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006_SumSquareDifference", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007_PrimeNumber", "007_PrimeNumber\007_PrimeNumber.csproj", "{730844D7-0046-4C33-9330-2570DB6D6462}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008_GreatestProduct", "008_GreatestProduct\008_GreatestProduct.csproj", "{E0D228D3-89EF-4F11-8964-74F6C4FDB78C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "009_SpecialPythagoreanTriplet", "009_SpecialPythagoreanTriplet\009_SpecialPythagoreanTriplet.csproj", "{F1E6C066-B0B6-4B54-A236-FFB5955A7C50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{730844D7-0046-4C33-9330-2570DB6D6462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{730844D7-0046-4C33-9330-2570DB6D6462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{730844D7-0046-4C33-9330-2570DB6D6462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D228D3-89EF-4F11-8964-74F6C4FDB78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D228D3-89EF-4F11-8964-74F6C4FDB78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D228D3-89EF-4F11-8964-74F6C4FDB78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D228D3-89EF-4F11-8964-74F6C4FDB78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E6C066-B0B6-4B54-A236-FFB5955A7C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E6C066-B0B6-4B54-A236-FFB5955A7C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E6C066-B0B6-4B54-A236-FFB5955A7C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E6C066-B0B6-4B54-A236-FFB5955A7C50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
