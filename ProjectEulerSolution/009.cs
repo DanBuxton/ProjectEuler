@@ -10,7 +10,7 @@ namespace ProjectEulerSolution
     {
         public static int SpecialPythagoreanTriplet()
         {
-            int a=0, b=0, c=0;
+            int a = 0, b = 0, c = 0;
             bool hasFinished = false;
 
             for (a = 1; a < 1000 && !hasFinished; a++)
@@ -19,17 +19,11 @@ namespace ProjectEulerSolution
                 {
                     c = 1000 - a - b;
                     double sumofsquares = Math.Pow(a, 2) + Math.Pow(b, 2);
-                    if (sumofsquares == Math.Pow(c, 2))
-                    {
-                        Console.WriteLine("a: {0}, b: {1}, c: {2}", a, b, c);
-                        Console.WriteLine("a+b+c = {0}", a + b + c);
-                        Console.WriteLine("a*b*c = {0}", a * b * c);
-                        hasFinished = true;
-                    }
+                    if (sumofsquares == Math.Pow(c, 2)) hasFinished = true;
                 }
             }
 
-            return a * b * c;
+            return (hasFinished ? a * b * c : 0);
         }
     }
 }

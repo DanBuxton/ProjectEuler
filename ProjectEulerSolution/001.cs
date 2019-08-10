@@ -10,19 +10,17 @@ namespace ProjectEulerSolution
     {
         public static int SumOfMultiples()
         {
+            int result = 0, i;
 
-            return Extensions.SumOfMultiples(1000, 3, 5);
-            //int result = 0, i;
+            for (i = 0; i < 1000; i++)
+            {
+                if ((i % 3) == 0 || (i % 5) == 0)
+                {
+                    result += i;
+                }
+            }
 
-            //for (i = 0; i < 1000; i++)
-            //{
-            //    if ((i % 3) == 0 || (i % 5) == 0)
-            //    {
-            //        result += i;
-            //    }
-            //}
-
-            //return result;
+            return result;
         }
     }
 }
