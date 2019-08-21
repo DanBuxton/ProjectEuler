@@ -34,7 +34,6 @@ namespace ProjectEulerSolution
                 }
                 else
                 {
-                    // A prime number always odd except for 2. 
                     counter += 2;
                 }
             }

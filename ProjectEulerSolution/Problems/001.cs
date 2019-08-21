@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectEulerSolution
+namespace ProjectEulerSolution.Problems
 {
     class _001
     {
@@ -12,13 +12,9 @@ namespace ProjectEulerSolution
         {
             int result = 0, i;
 
-            for (i = 0; i < 1000; i++)
-            {
+            for (i = 3; i < 1000; i++)
                 if ((i % 3) == 0 || (i % 5) == 0)
-                {
                     result += i;
-                }
-            }
 
             return result;
         }

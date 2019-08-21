@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectEulerSolution
+namespace ProjectEulerSolution.Problems
 {
     class _007
     {
@@ -17,9 +17,7 @@ namespace ProjectEulerSolution
                 num++;
 
                 if (num.IsPrime())
-                {
                     numPrimes++;
-                }
             }
 
             return num;

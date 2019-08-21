@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectEulerSolution
+namespace ProjectEulerSolution.Problems
 {
     class _003
     {
@@ -27,12 +27,10 @@ namespace ProjectEulerSolution
                 throw new Exception();
 
             for (long i = 2, end = (long)Math.Sqrt(n); i <= end; i++)
-            {
                 if (n % i == 0)
                     return i;
-            }
 
-            return n;  // n itself is prime
+            return n;
         }
     }
 }
