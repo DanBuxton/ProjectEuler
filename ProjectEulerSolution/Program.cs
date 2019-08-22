@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,8 +26,11 @@ namespace ProjectEulerSolution
             Console.WriteLine(_011.GreatestProduct());
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine(_014.CollatzSequenceLongestChain());
+            try
+            {
+                Console.WriteLine(_014.CollatzSequenceLongestChain());
+            }
+            catch (Exception) { }
         }
     }
 }

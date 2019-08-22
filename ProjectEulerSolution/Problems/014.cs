@@ -11,24 +11,25 @@ namespace ProjectEulerSolution.Problems
         public static int CollatzSequenceLongestChain()
         {
             int result = 0;
-            int maxSteps = 0;
+            long maxSteps = 0;
 
             Console.WriteLine();
 
-            for (int i = 0; i < 1000000; i++)
+            for (int i = 1; i < 1000000; i++)
             {
-                int steps = CollatzSequence(i);
+                long steps = CollatzSequence(i);
 
-                if (true)
+                if (steps > maxSteps)
                 {
-
+                    maxSteps = steps;
+                    result = i;
                 }
             }
 
             return result;
         }
 
-        private static int CollatzSequence(int n)
+        private static int CollatzSequence(long n)
         {
             return n == 0 ? throw new ArgumentException() : (n == 1 ? 1 : 1 + (n % 2 == 0 ? CollatzSequence(n / 2) : CollatzSequence(3 * n + 1)));
         }
