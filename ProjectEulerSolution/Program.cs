@@ -21,6 +21,12 @@ namespace ProjectEulerSolution
             Console.WriteLine(_008.GreatestProduct());
             Console.WriteLine(_009.SpecialPythagoreanTriplet());
             Console.WriteLine(_010.SumOfPrimes());
+            Console.WriteLine();
+            Console.WriteLine(_011.GreatestProduct());
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(_014.CollatzSequenceLongestChain());
         }
     }
 }
