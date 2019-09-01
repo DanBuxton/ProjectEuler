@@ -23,11 +23,11 @@ namespace ProjectEulerSolution
             //Console.WriteLine(_009.SpecialPythagoreanTriplet());
             //Console.WriteLine(_010.SumOfPrimes());
             //Console.WriteLine(_011.GreatestProduct());
-            Console.WriteLine(_012.HighlyDivisibleTranglularNumberTesting());
+            //Console.WriteLine(_012.HighlyDivisibleTranglularNumberTesting());
             //Console.WriteLine(_013.OneHundred50DigitSumToTenDigits());
             try
             {
-                //Console.WriteLine(_014.CollatzSequenceLongestChain());
+                Console.WriteLine(_014.CollatzSequenceLongestChain());
             }
             catch (Exception) { }
         }
