@@ -25,11 +25,7 @@ namespace ProjectEulerSolution
             //Console.WriteLine(_011.GreatestProduct());
             //Console.WriteLine(_012.HighlyDivisibleTranglularNumberTesting());
             //Console.WriteLine(_013.OneHundred50DigitSumToTenDigits());
-            try
-            {
-                Console.WriteLine(_014.CollatzSequenceLongestChain());
-            }
-            catch (Exception) { }
+            Console.WriteLine(_014.CollatzSequenceLongestChain());
         }
     }
 }

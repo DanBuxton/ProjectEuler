@@ -8,7 +8,7 @@ namespace ProjectEulerSolution.Problems
 {
     class _011
     {
-        private static readonly int[,] grid = new int[,] {
+        public static readonly int[,] grid = new int[,] {
             { 08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08 },
             { 49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00 },
             { 81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65 },
@@ -31,95 +31,148 @@ namespace ProjectEulerSolution.Problems
             { 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48 }
         };
 
-        private static long BiggestProduct { get; set; } = 0;
+        private static int BiggestProduct { get; set; } = 0;
         private static int[] AdjacentNumbers { get; set; } = { 0, 0, 0, 0 };
 
         public static string GreatestProduct()
         {
             bool hasBeenFound = false;
 
-            int num1, num2, num3, num4;
-
 
             for (int x = 0; x < 20 && !hasBeenFound; x++)
             {
                 for (int y = 0; y < 20 && !hasBeenFound; y++)
                 {
-                    long product;
-                    num1 = grid[x, y];
+                    int product;
 
+                    int num1 = grid[x, y], num2, num3, num4;
+
+                    #region Down
                     try
                     {
-                        // down
-                        product = num1 * grid[x + 1, y] * grid[x + 2, y] * grid[x + 3, y];
-
                         num2 = grid[x + 1, y];
                         num3 = grid[x + 2, y];
                         num4 = grid[x + 3, y];
 
+                        product = num1 * grid[x + 1, y] * grid[x + 2, y] * grid[x + 3, y];
+
                         UpdateProduct(product, num1, num2, num3, num4);
                     }
                     catch (Exception) { }
+                    #endregion
 
+                    #region Right
                     try
                     {
-                        // right
-                        product = num1 * grid[x, y + 1] * grid[x, y + 2] * grid[x, y + 3];
-
                         num2 = grid[x, y + 1];
                         num3 = grid[x, y + 2];
                         num4 = grid[x, y + 3];
 
+                        product = num1 * grid[x, y + 1] * grid[x, y + 2] * grid[x, y + 3];
+
                         UpdateProduct(product, num1, num2, num3, num4);
                     }
                     catch (Exception) { }
+                    #endregion
 
+                    #region Left
                     try
                     {
-                        // left
-                        product = num1 * grid[x, y - 1] * grid[x, y - 2] * grid[x, y - 3];
-
                         num2 = grid[x, y - 1];
                         num3 = grid[x, y - 2];
                         num4 = grid[x, y - 3];
 
+                        product = num1 * grid[x, y - 1] * grid[x, y - 2] * grid[x, y - 3];
+
                         UpdateProduct(product, num1, num2, num3, num4);
                     }
                     catch (Exception) { }
+                    #endregion
 
+                    #region Diaganol
+                    #region Down Right
                     try
                     {
-                        // diagonal
+                        num2 = grid[x + 1, y + 1];
+                        num3 = grid[x + 2, y + 2];
+                        num4 = grid[x + 3, y + 3];
 
-                        // TODO
+                        product = num1 * num2 * num3 * num4;
+
+                        UpdateProduct(product, num1, num2, num3, num4);
                     }
                     catch (Exception) { }
+                    #endregion
 
+                    #region Down Left
                     try
                     {
-                        // up
-                        product = num1 * grid[x - 1, y] * grid[x - 2, y] * grid[x - 3, y];
+                        num2 = grid[x + 1, y - 1];
+                        num3 = grid[x + 2, y - 2];
+                        num4 = grid[x + 3, y - 3];
 
+                        product = num1 * num2 * num3 * num4;
+
+                        UpdateProduct(product, num1, num2, num3, num4);
+                    }
+                    catch (Exception) { }
+                    #endregion
+
+                    #region Up Right
+                    try
+                    {
+                        num2 = grid[x - 1, y + 1];
+                        num3 = grid[x - 2, y + 2];
+                        num4 = grid[x - 3, y + 3];
+
+                        product = num1 * num2 * num3 * num4;
+
+                        UpdateProduct(product, num1, num2, num3, num4);
+                    }
+                    catch (Exception) { }
+                    #endregion
+
+                    #region Up Left
+                    try
+                    {
+                        num2 = grid[x - 1, y - 1];
+                        num3 = grid[x - 2, y - 2];
+                        num4 = grid[x - 3, y - 3];
+
+                        product = num1 * num2 * num3 * num4;
+
+                        UpdateProduct(product, num1, num2, num3, num4);
+                    }
+                    catch (Exception) { }
+                    #endregion
+                    #endregion
+
+                    #region Up
+                    try
+                    {
                         num2 = grid[x - 1, y];
                         num3 = grid[x - 2, y];
                         num4 = grid[x - 3, y];
 
+                        product = num1 * grid[x - 1, y] * grid[x - 2, y] * grid[x - 3, y];
+
                         UpdateProduct(product, num1, num2, num3, num4);
                     }
                     catch (Exception) { }
+                    #endregion
                 }
             }
 
             return string.Format("{0} x {1} x {2} x {3} = {4}", AdjacentNumbers[0], AdjacentNumbers[1], AdjacentNumbers[2], AdjacentNumbers[3], BiggestProduct);
         }
 
-        private static void UpdateProduct(long product, params int[] num)
+        private static void UpdateProduct(int product, params int[] nums)
         {
             if (product > BiggestProduct)
             {
+                AdjacentNumbers = new int[] { nums[0], nums[1], nums[2], nums[3] };
+                Console.WriteLine("New biggest: {0} x {1} x {2} x {3} = {4)", AdjacentNumbers[0], AdjacentNumbers[1], AdjacentNumbers[2], AdjacentNumbers[3], product);
                 BiggestProduct = product;
-                AdjacentNumbers = new int[] { num[0], num[1], num[2], num[3] };
-                Console.WriteLine("New biggest: {0} - {1} - {2} - {3}", AdjacentNumbers[0], AdjacentNumbers[1], AdjacentNumbers[2], AdjacentNumbers[3]);
                 Console.WriteLine("New biggest: " + BiggestProduct);
             }
         }
